@@ -1,0 +1,58 @@
+[
+  {
+    "id": 3,
+    "title": "All About Vitamin B",
+    "likes": 2,
+    "date": "2022-10-22",
+    "image": "3.jpg",
+    "text": "Although here at Young Living we’re mostly known for our high-quality essential oils, we also offer a variety of food supplements and place great importance on knowing that our insides are cared for just as much as our outsides. With that in mind, in this blog, we’ll be talking about Vitamin B and all its brilliant benefits, helping you to learn how to ensure you’re getting enough Vitamin B and understanding how it can work alongside your daily life."
+  },
+  {
+    "id": 4,
+    "title": "Summer BBQ Recipes",
+    "likes": 32,
+    "date": "2022-10-22",
+    "image": "4.jpg",
+    "text": "Here at Young Living, we love using inventive ways to create recipes in the kitchen using our Plus essential oils.Thanks to their deliciously fruity and herby flavours, our Plus oils can be used to create tasty dishes in every season,from light and bright salad dressings to hearty casseroles and indulgent baked goods. However, as we’re enjoying the summer sunshine and are firmly in BBQ season."
+  },
+  {
+    "id": 5,
+    "title": "6 Fun Ways to Use <br> Essential Oils for Children",
+    "likes": 1,
+    "date": "2022-10-23",
+    "image": "5.jpg",
+    "text": "When it comes to essential oils, Young Living understands the importance of creating products that the whole family can enjoy. If you’re a keen user of oils yourself, you may want to introduce Young Living’s collection to your little ones, so in this blog, we’ll be taking you through some of our favourites from Young Living’s child friendly KidScents range, while explaining the ways to safely use diluted essential oils for children."
+  },
+  {
+    "id": 7,
+    "title": "Essential Oils for Summer<br> with Young Living",
+    "likes": 10,
+    "date": "2022-10-24",
+    "image": "7.jpg",
+    "text": "When the weather heats up, there’s no better time to explore Young Living’s top tips on essential oils for the summer season. Whether you’re simply on the hunt for summery scents, are looking for inspiration on inventive uses for your favourite oils or are hoping to find out more about how to use essential oils safely on sunny days, this is the blog post for you. So, let’s get started!"
+  },
+  {
+    "id": 1,
+    "title": "Using essential oils for hair:<br> 3 DIY recipes you need to try",
+    "likes": 29,
+    "date": "2022-10-21",
+    "image": "1.jpg",
+    "text": "Walk into any beauty store and you’ll find shelves stocked with hair products with overwhelming ingredients lists. But taking care of your hair doesn’t need to be complicated.In this blog, you will find out how to use essential oils to keep your hair looking and feeling healthy.You’ll also find tips on which essential oils are best for your hair, as well as some DIY recipes for different hair care needs."
+  },
+  {
+    "id": 2,
+    "title": "How to Use Palmarosa <br> Essential Oil",
+    "likes": 44,
+    "date": "2022-10-21",
+    "image": "2.jpg",
+    "text": "With its soothing and stimulating aroma, Palmarosa essential oil is an ultimate favourite for lovers of all things beauty. Praised for its ability to rejuvenate healthy-looking skin, Palmarosa is created by steam distilling Cymbopogon martini, one of several aromatic flowering grasses that belong to the Poaceae family. Native to India and Indochina, this plant is closely related to lemongrass, and provides a green, delicate, and wonderfully fresh fragrance that can be added to everything from perfumes to facial serums."
+  },
+  {
+    "id": 6,
+    "title": "5 Top Tips on Washing <br> Fruits & Vegetables",
+    "likes": 36,
+    "date": "2022-10-21",
+    "image": "6.jpg",
+    "text": "If you’re anything like us at Young Living, you love enjoying a balanced diet filled with delicious fruits and vegetables.Whether you’re prepping your fruit and veg for sweet breakfast smoothies, hearty lunchtime salads or light and refreshing evening dishes, learning the best way to clean and prep your ingredients is always the first step to creating any delicious meal. In this blog, we’ll be taking you through our top 5 tips on how to best wash fruits and vegetables, helping you to ensure that your favourite healthy ingredients are as clean as they are tasty from now on!"
+  }
+]
