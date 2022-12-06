@@ -18,35 +18,43 @@
         <q-carousel-slide :name="5" img-src="../assets/slideshow/5.jpg" />
       </q-carousel>
     </q-responsive>
-    <div class="row wrap justify-center q-gutter-lg q-mt-md">
+    <div class="q-pa-md row justify-center q-gutter-md">
       <q-card class="my-card" v-for="a in articles" :key="a.id">
         <img :src="`./src/assets/images/intro/${a.image}`" />
 
-        <q-card-section>
+        <q-card-section class="card-title-box">
           <div class="text-h6" v-html="a.title"></div>
         </q-card-section>
+        <q-card-section> {{ a.text.substring(0, 110) }}... </q-card-section>
 
-        <q-card-section class="q-pt-none">
-          {{ a.text.substring(0, 150) }}...
-          <div class="text-subtitle2 q-mt-md" @click="toggle = !toggle">READ MORE...</div>
+        <q-card-section class="text-subtitle2" style="text-align: right">
+          <q-btn unelevated @click="openDialog(a.id)">READ MORE...</q-btn>
         </q-card-section>
       </q-card>
     </div>
   </div>
-  <ArticleDialog v-model:toggle="toggle"></ArticleDialog>
+  <ArticleDialog :article="article" v-model:toggle="toggle"></ArticleDialog>
 </template>
 <script setup>
 import { ref } from 'vue';
 import { useArticleStore } from '../stores/articles.js';
 import ArticleDialog from '../components/ArticleDialog.vue';
+
 const articleStore = useArticleStore();
 const articles = articleStore.articles;
 
 const slide = ref(1);
 const autoplay = ref(4000);
-
 const toggle = ref(false);
+
+const openDialog = (id) => {
+  const article = ref(articles.find((a) => a.id == id));
+  articleStore.article = article.value;
+  console.log(articleStore.article);
+  toggle.value = !toggle.value;
+};
 </script>
+
 <style lang="sass">
 .my-card
   width: 300px

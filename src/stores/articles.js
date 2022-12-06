@@ -5,6 +5,8 @@ export const useArticleStore = defineStore('articles', {
   state: () => {
     return {
       articles,
+      id: 0,
+      article: null,
     };
   },
 });
