@@ -62,6 +62,16 @@ const props = defineProps({
 });
 const emit = defineEmits(['update:toggle']);
 
+const firstName = ref('');
+const lastName = ref('');
+const firstNameRef = ref(null);
+const lastNameRef = ref(null);
+
+const age = ref();
+const ageRef = ref(null);
+
+const accept = ref(false);
+
 const openLogin = useVModel(props, 'toggle', emit);
 
 const submit = () => {
@@ -104,16 +114,6 @@ const reset = () => {
   lastNameRef.value.resetValidation();
   ageRef.value.resetValidation();
 };
-
-const firstName = ref('');
-const lastName = ref('');
-const firstNameRef = ref(null);
-const lastNameRef = ref(null);
-
-const age = ref();
-const ageRef = ref(null);
-
-const accept = ref(false);
 
 const nameRules = [(val) => (val && val.length > 0) || 'Please type something'];
 const ageRules = [
