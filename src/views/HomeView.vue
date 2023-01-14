@@ -47,10 +47,13 @@ const slide = ref(1);
 const autoplay = ref(4000);
 const toggle = ref(false);
 
+const article = ref();
+
 const openDialog = (id) => {
-  const article = ref(articles.find((a) => a.id == id));
-  articleStore.article = article.value;
-  console.log(articleStore.article);
+  article.value = articles.find((a) => a.id == id);
+
+  articleStore.article = article;
+
   toggle.value = !toggle.value;
 };
 </script>
