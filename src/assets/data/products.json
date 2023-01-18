@@ -1,0 +1,122 @@
+[
+  {
+    "itemNumber": 3039,
+    "category": "Dental Care",
+    "name": "Thieves AromaBright Toothpaste",
+    "description": "Thieves® AromaBright™ Toothpaste brushes away buildup and helps support strong and healthy-looking teeth with all-natural ingredients that are gentle on teeth and enamel.",
+    "image": "thieves_aromabright_4oz_silo_2020_f9f4ee_3039.jpg",
+    "price": 15.19,
+    "discount": 12.0,
+    "inStock": 123
+  },
+  {
+    "itemNumber": 23801,
+    "category": "Medical",
+    "name": "Thieves Chest Rub",
+    "description": "Thieves® Chest Rub uses plant power to deliver over-the-counter strength to temporarily relieve cough and congestion with the soothing aroma and power of camphor, menthol, and eucalyptus.",
+    "image": "thieves_chestrub.jfif",
+    "price": 39.49,
+    "discount": 30.0,
+    "inStock": 42
+  },
+  {
+    "itemNumber": 23801,
+    "category": "Medical",
+    "name": "Cool Mint CBD Oil",
+    "description": "Cool Mint CBD Oil uses a combination of potent CBD with Spearmint and Peppermint essential oils for a cooling sensation to refresh and invigorate you on even the busiest days",
+    "image": "Cool_Mint_CBD_Oil_-_500mg_28472_JPEG.jpg",
+    "price": 113.49,
+    "discount": 86.25,
+    "inStock": 42
+  },
+  {
+    "itemNumber": 30291,
+    "category": "Skin Care",
+    "name": "BLOOM Brightening Cleanse",
+    "description": "BLOOM Brightening Cleanser is a naturally derived facial wash that reveals radiant skin and leaves your face feeling fresh and smooth.",
+    "image": "Bloom_Brightening_Cleanser_30291_JPEG_F9F4EE.jpg",
+    "price": 51.97,
+    "discount": 39.5,
+    "inStock": 49
+  },
+  {
+    "itemNumber": 36285,
+    "category": "Skin Care",
+    "name": "BLOOM Essential Oil",
+    "description": "BLOOM essential oil blend combines Vetiver, Blue Cypress, Davana, Royal Hawaiian Sandalwood™, Clove, Jasmine, Carrot Seed,Spearmint, Geranium, and Sacred Frankincense",
+    "image": "SILO_Balance_TONER_Convention_2022_US_and_CA_Skava__1_.jfif",
+    "price": 47.37,
+    "discount": 36.0,
+    "inStock": 31
+  },
+  {
+    "itemNumber": 5764,
+    "category": "Skin Care",
+    "name": "AgilEase",
+    "description": "AgilEase® promotes joint health by supporting healthy cartilage, joint flexibility and mobility, and the body’s healthy response to inflammation after exercise.",
+    "image": "AgilEase_F9F4EE.jpg",
+    "price": 69.74,
+    "discount": 53.0,
+    "inStock": 18
+  },
+  {
+    "itemNumber": 4994,
+    "category": "Scent",
+    "name": "Basil Essential Oil",
+    "description": "Basil essential oil refreshes the mind when inhaled and soothes fatigued muscles when massaged into the skin.",
+    "image": "Basil_15ml_US_Website_2022.jfif",
+    "price": 37.5,
+    "discount": 28.5,
+    "inStock": 21
+  },
+  {
+    "itemNumber": 12124,
+    "category": "Wellness",
+    "name": "Breathe Again Roll-On",
+    "description": "Breathe Again™ Roll-On combines Copaiba, Myrtle, and Peppermint with four different types of Eucalyptus —including Eucalyptus Blue—to create a powerful, invigorating experience",
+    "image": "BreatheAgain_10mlTube_US_website_2021.jfif",
+    "price": 37.5,
+    "discount": 28.5,
+    "inStock": 21
+  },
+  {
+    "itemNumber": 12124,
+    "category": "Scent",
+    "name": "Cypress Essential Oil",
+    "description": "Cypress essential oil has a clean, evergreen aroma that can be used aromatically to create an ambience of security and grounding.",
+    "image": "Cypress_15ml_US_Website_2021.jfif",
+    "price": 29.25,
+    "discount": 22.25,
+    "inStock": 99
+  },
+  {
+    "itemNumber": 3597,
+    "category": "Scent",
+    "name": "Eucalyptus Blue Essential Oil",
+    "description": "Eucalyptus Blue essential oil is obtained from botanicals that are grown and distilled at the Finca Botanica Farm and Distillery in Chongon, Ecuador.",
+    "image": "3597.jfif",
+    "price": 29.25,
+    "discount": 22.25,
+    "inStock": 99
+  },
+  {
+    "itemNumber": 3597,
+    "category": "Skin",
+    "name": "ART Gentle Cleanser",
+    "description": "ART® Gentle Cleanser uses a gentle foaming action to help clear away dirt and impurities with skin-loving premium essential oils sure to leave your face refreshed and radiant.",
+    "image": "art_gentle.jfif",
+    "price": 49.67,
+    "discount": 37.75,
+    "inStock": 72
+  },
+  {
+    "itemNumber": 5360,
+    "category": "Skin",
+    "name": "ART Refreshing Toner",
+    "description": "ART® Refreshing Toner is made with premium essential oils and natural ingredients to help balance skin’s pH, sweep away impurities, refresh skin, and reduce the appearance of pores.",
+    "image": "ARTRefreshingToner_Silo_US_2016_F9F4EE.jpg",
+    "price": 36.51,
+    "discount": 27.75,
+    "inStock": 5
+  }
+]
