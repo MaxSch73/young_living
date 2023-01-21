@@ -2,8 +2,8 @@
   <div>
     <div class="bg-img">
       <div class="text-center overlay rounded-borders">
-        <h1>WHAT ARE ESSENTIAL OILS?</h1>
-        <p>
+        <p class="text-h2 q-pa-lg text-bold">WHAT ARE ESSENTIAL OILS?</p>
+        <p class="text-bold">
           The purest distillation of nature, essential oils have enhanced lives for thousands of
           years, and new uses and benefits are still being discovered.
         </p>

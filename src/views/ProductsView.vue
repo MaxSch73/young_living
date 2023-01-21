@@ -1,12 +1,48 @@
-<template #top-right>
-  <q-input dense debounce="300" v-model="filter" placeholder="Search">
-    <template #append>
-      <q-icon name="search" />
-    </template>
-  </q-input>
+<template>
   <div class="q-pa-md">
-    <q-table title="Products" :rows="products" :columns="columns" row-key="name" />
+    <q-table
+      ref="tableRef"
+      class="my-sticky-header-table"
+      title="Our Products"
+      :rows="products"
+      :columns="columns"
+      row-key="id"
+      v-model:pagination="pagination"
+      :filter="filter"
+      binary-state-sort
+      style="height: 80vh"
+      :visible-columns="filteredColumns()"
+      :rows-per-page-options="[20]"
+    >
+      <template #body-cell-image="props">
+        <img
+          @click="openImage(props.row.itemNumber)"
+          :src="`../../src/assets/images/products/${props.row.image}`"
+          :alt="props.row.name"
+        />
+      </template>
+      <template #top-right>
+        <q-input borderless dense debounce="300" v-model="filter" placeholder="Search">
+          <template #append>
+            <q-icon name="search" />
+          </template>
+        </q-input>
+      </template>
+    </q-table>
   </div>
+  <q-dialog v-model="show">
+    <q-card class="my-card2">
+      <q-img :src="`../../src/assets/images/products/${product.image}`"></q-img>
+      <q-btn
+        size="1.5rem"
+        class="absolute fixed-top-right q-my-md q-px-md q-py-ld q-mr-md"
+        color="primary"
+        round
+        >€ {{ product.discount }}</q-btn
+      >
+      <p class="absolute fixed-bottom text-center text-h6">{{ product.name }}</p>
+    </q-card>
+  </q-dialog>
 </template>
 
 <script setup>
@@ -20,6 +56,20 @@ const productStore = useProductStore();
 const products = productStore.products;
 
 const filter = ref('');
+const pagination = ref({
+  rowsPerPage: 0,
+});
+
+const openImage = (id) => {
+  product.value = products.find((p) => p.itemNumber == id);
+
+  productStore.product = product;
+
+  show.value = !show.value;
+};
+
+const show = ref(false);
+const product = ref();
 
 const filteredColumns = () => {
   const cols = ['name', 'price'];
@@ -37,9 +87,20 @@ const columns = [
     align: 'left',
     sortable: false,
   },
-  { name: 'image', align: 'center', label: 'Image', field: 'Image', sortable: false },
+  { name: 'image', align: 'right', label: 'Image', field: 'image', sortable: false },
   { name: 'name', align: 'center', label: 'Name', field: 'name', sortable: true },
-  { name: 'category', align: 'center', label: 'Category', field: 'Category' },
-  { name: 'price', align: 'right', label: 'Price', field: 'Price' },
+  { name: 'category', align: 'center', label: 'Category', field: 'category' },
+  { name: 'price', align: 'right', label: 'Price', field: 'price', sortable: true },
 ];
 </script>
+<style lang="sass">
+img
+  width: 100px
+  height: 100px
+
+.my-sticky-header-table
+
+  .q-table__top
+    /* bg color is important for th; just specify one */
+    background-color: #FFD84D
+</style>
