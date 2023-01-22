@@ -61,15 +61,16 @@ const pagination = ref({
 });
 
 const openImage = (id) => {
+  console.log(id);
   product.value = products.find((p) => p.itemNumber == id);
 
-  productStore.product = product;
+  productStore.product = product.value;
 
   show.value = !show.value;
 };
 
 const show = ref(false);
-const product = ref();
+const product = ref(null);
 
 const filteredColumns = () => {
   const cols = ['name', 'price'];
