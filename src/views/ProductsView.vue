@@ -2,7 +2,7 @@
   <div class="q-pa-md">
     <q-table
       ref="tableRef"
-      class="my-sticky-header-table"
+      class="my-sticky-header-table text-primary"
       title="Our Products"
       :rows="products"
       :columns="columns"
@@ -22,7 +22,7 @@
         />
       </template>
       <template #top-right>
-        <q-input borderless dense debounce="300" v-model="filter" placeholder="Search">
+        <q-input class="text-black" borderless dense debounce="300" v-model="filter" placeholder="Search">
           <template #append>
             <q-icon name="search" />
           </template>
@@ -105,10 +105,8 @@ img
     /* bg color is important for th; just specify one */
     background-color: #FFD84D
 
-
-
 .my-card2
     width: 100%
-    height: 100%
+    height: 70%
     position:relative
 </style>
