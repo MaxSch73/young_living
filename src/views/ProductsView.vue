@@ -14,6 +14,12 @@
       :visible-columns="filteredColumns()"
       :rows-per-page-options="[20]"
     >
+      <template #body-cell-price="props">
+        <div class="column wrap text-right q-mr-md">
+          <span class="text-bold">€ {{ props.row.discount.toFixed(2) }}</span>
+          <span>(€ {{ props.row.price }})</span>
+        </div>
+      </template>
       <template #body-cell-image="props">
         <img
           @click="openImage(props.row.itemNumber)"
@@ -22,7 +28,14 @@
         />
       </template>
       <template #top-right>
-        <q-input class="text-black" borderless dense debounce="300" v-model="filter" placeholder="Search">
+        <q-input
+          class="text-black"
+          borderless
+          dense
+          debounce="300"
+          v-model="filter"
+          placeholder="Search"
+        >
           <template #append>
             <q-icon name="search" />
           </template>
@@ -108,5 +121,4 @@ img
 .my-card2
     width: 100%
     height: 70%
-    position:relative
 </style>
