@@ -104,4 +104,11 @@ img
   .q-table__top
     /* bg color is important for th; just specify one */
     background-color: #FFD84D
+
+
+
+.my-card2
+    width: 100%
+    height: 100%
+    position:relative
 </style>
