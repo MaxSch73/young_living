@@ -37,8 +37,8 @@
 </template>
 <script setup>
 import { ref } from 'vue';
-import { useArticleStore } from '../stores/articles.js';
 import ArticleDialog from '../components/ArticleDialog.vue';
+import { useArticleStore } from '../stores/articles.js';
 
 const articleStore = useArticleStore();
 const articles = articleStore.articles;

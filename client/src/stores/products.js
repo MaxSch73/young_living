@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia';
 import products from '../assets/data/products.json';
+import axios from 'axios';
 
 export const useProductStore = defineStore('products', {
   state: () => {
@@ -8,5 +9,11 @@ export const useProductStore = defineStore('products', {
       id: 0,
       product: null,
     };
+  },
+  actions: {
+    async getProducts() {
+      const { data } = await axios.get('http://localhost:3000/products');
+      this.products = data;
+    },
   },
 });
