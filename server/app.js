@@ -4,7 +4,7 @@ import helmet from 'helmet';
 import dotenv from 'dotenv';
 import path from 'path';
 import cors from 'cors';
-// import studentRoutes from './routes/student.js';
+import router from './routes/router.js';
 import { errorHandler, notFoundHandler } from './middleware/errorHandler.js';
 
 dotenv.config();
@@ -21,7 +21,7 @@ app.use(express.static(path.join(dirname, '/public')));
 
 app.use(express.json());
 
-app.use('/', studentRoutes);
+app.use('/', router);
 
 app.use(errorHandler);
 app.use(notFoundHandler);
