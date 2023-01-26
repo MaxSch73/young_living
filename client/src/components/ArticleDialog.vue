@@ -3,7 +3,7 @@
     <q-dialog v-model="openDialog">
       <q-card>
         <q-card-section>
-          <img :src="`src/assets/images/intro/${article.image}`" />
+          <img :src="`http://localhost:3000/images/articles/${article.image}`" />
           <div class="text-h6" v-html="article.title"></div>
         </q-card-section>
 

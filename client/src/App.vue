@@ -1,7 +1,3 @@
-<script setup>
-import Navbar from './components/NavbarComp.vue';
-</script>
-
 <template>
   <q-layout view="lHh Lpr lFf">
     <Navbar></Navbar>
@@ -12,16 +8,18 @@ import Navbar from './components/NavbarComp.vue';
 </template>
 
 <script setup>
-import { useArticleStore } from '../stores/articles.js';
-import { useProdutStore } from '../stores/products.js';
+import Navbar from './components/NavbarComp.vue';
+
+import { useArticleStore } from './stores/articles.js';
+import { useProductStore } from './stores/products.js';
 import { onMounted } from 'vue';
 
 const articleStore = useArticleStore();
-const productStore = useProdutStore();
+const productStore = useProductStore();
 
 onMounted(async () => {
-  articleStore.getArticles();
-  productStore.getProducts();
-  console.log(articleStore.articles, articleStore.products);
+  await articleStore.getArticles();
+  await productStore.getProducts();
+  console.log(articleStore.articles, productStore.products);
 });
 </script>

@@ -16,14 +16,14 @@
     >
       <template #body-cell-price="props">
         <div class="column wrap text-right q-mr-md">
-          <span class="text-bold">€ {{ props.row.discount.toFixed(2) }}</span>
+          <span class="text-bold">€ {{ props.row.discount }}</span>
           <span>(€ {{ props.row.price }})</span>
         </div>
       </template>
       <template #body-cell-image="props">
         <img
-          @click="openImage(props.row.itemNumber)"
-          :src="`../../src/assets/images/products/${props.row.image}`"
+          @click="openImage(props.row.item_number)"
+          :src="`http://localhost:3000/images/products/${props.row.image}`"
           :alt="props.row.name"
         />
       </template>
@@ -42,20 +42,20 @@
         </q-input>
       </template>
     </q-table>
+    <q-dialog v-model="show">
+      <q-card class="my-card2">
+        <q-img class="qimg" :src="`http://localhost:3000/images/products/${product.image}`"></q-img>
+        <q-btn
+          size="1.5rem"
+          class="absolute fixed-top-right q-my-md q-px-md q-py-ld q-mr-md"
+          color="primary"
+          round
+          >€ {{ product.discount }}</q-btn
+        >
+        <p class="absolute fixed-bottom text-center text-h6">{{ product.name }}</p>
+      </q-card>
+    </q-dialog>
   </div>
-  <q-dialog v-model="show">
-    <q-card class="my-card2">
-      <q-img :src="`../../src/assets/images/products/${product.image}`"></q-img>
-      <q-btn
-        size="1.5rem"
-        class="absolute fixed-top-right q-my-md q-px-md q-py-ld q-mr-md"
-        color="primary"
-        round
-        >€ {{ product.discount }}</q-btn
-      >
-      <p class="absolute fixed-bottom text-center text-h6">{{ product.name }}</p>
-    </q-card>
-  </q-dialog>
 </template>
 
 <script setup>
@@ -75,7 +75,7 @@ const pagination = ref({
 
 const openImage = (id) => {
   console.log(id);
-  product.value = products.find((p) => p.itemNumber == id);
+  product.value = products.find((p) => p.item_number == id);
 
   productStore.product = product.value;
 
@@ -88,22 +88,22 @@ const product = ref(null);
 const filteredColumns = () => {
   const cols = ['name', 'price'];
   if ($q.screen.gt.xs) cols.push('image');
-  if ($q.screen.gt.sm) cols.push('item', 'category');
+  if ($q.screen.gt.sm) cols.push('item', 'ategory_name');
   return cols;
 };
 
 const columns = [
   {
-    name: 'itemNumber',
+    name: 'item_number',
     required: true,
     label: 'Item #',
-    field: 'itemNumber',
+    field: 'item_number',
     align: 'left',
     sortable: false,
   },
   { name: 'image', align: 'right', label: 'Image', field: 'image', sortable: false },
   { name: 'name', align: 'center', label: 'Name', field: 'name', sortable: true },
-  { name: 'category', align: 'center', label: 'Category', field: 'category' },
+  { name: 'ategory_name', align: 'center', label: 'Category', field: 'category_name' },
   { name: 'price', align: 'right', label: 'Price', field: 'price', sortable: true },
 ];
 </script>
@@ -113,12 +113,10 @@ img
   height: 100px
 
 .my-sticky-header-table
-
   .q-table__top
-    /* bg color is important for th; just specify one */
     background-color: #FFD84D
 
 .my-card2
-    width: 100%
-    height: 70%
+    width: 100vw
+    height: 100vh
 </style>

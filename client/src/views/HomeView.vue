@@ -20,7 +20,7 @@
     </q-responsive>
     <div class="q-pa-md row justify-center q-gutter-md">
       <q-card class="my-card" v-for="a in articles" :key="a.id">
-        <img :src="`./src/assets/images/intro/${a.image}`" />
+        <img width="200px" height="400px" :src="`http://localhost:3000/images/articles/${a.image}`" />
 
         <q-card-section class="card-title-box">
           <div class="text-h6" v-html="a.title"></div>
@@ -32,8 +32,8 @@
         </q-card-section>
       </q-card>
     </div>
+    <ArticleDialog :article="article" v-model:toggle="toggle"></ArticleDialog>
   </div>
-  <ArticleDialog :article="article" v-model:toggle="toggle"></ArticleDialog>
 </template>
 <script setup>
 import { ref } from 'vue';

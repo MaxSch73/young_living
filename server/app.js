@@ -13,9 +13,9 @@ const dirname = path.resolve();
 
 const app = express();
 
-app.use(morgan('dev'));
 app.use(cors());
-app.use(helmet());
+app.use(morgan('dev'));
+app.use(helmet.crossOriginResourcePolicy({ policy: 'cross-origin' }));
 
 app.use(express.static(path.join(dirname, '/public')));
 

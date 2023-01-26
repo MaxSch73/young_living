@@ -1,11 +1,10 @@
 import { defineStore } from 'pinia';
-import articles from '../assets/data/articles.json';
 import axios from 'axios';
 
 export const useArticleStore = defineStore('articles', {
   state: () => {
     return {
-      articles,
+      articles: [],
       id: 0,
       article: null,
     };
