@@ -94,7 +94,7 @@ const product = ref(null);
 const filteredColumns = () => {
   const cols = ['name', 'price'];
   if ($q.screen.gt.xs) cols.push('image');
-  if ($q.screen.gt.sm) cols.push('item', 'ategory_name');
+  if ($q.screen.gt.sm) cols.push('item', 'category_name');
   return cols;
 };
 
@@ -109,7 +109,7 @@ const columns = [
   },
   { name: 'image', align: 'right', label: 'Image', field: 'image', sortable: false },
   { name: 'name', align: 'center', label: 'Name', field: 'name', sortable: true },
-  { name: 'ategory_name', align: 'center', label: 'Category', field: 'category_name' },
+  { name: 'category_name', align: 'center', label: 'Category', field: 'category_name' },
   { name: 'price', align: 'right', label: 'Price', field: 'price', sortable: true },
 ];
 </script>
