@@ -23,7 +23,7 @@
           </p>
         </div>
         <div class="col text-center">
-          <img src="../assets/images/benefits.jpg" alt="" />
+          <q-img width="400px" src="../assets/images/benefits.jpg" alt="" />
         </div>
       </div>
     </div>

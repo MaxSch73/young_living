@@ -20,7 +20,11 @@
     </q-responsive>
     <div class="q-pa-md row justify-center q-gutter-md">
       <q-card class="my-card" v-for="a in articles" :key="a.id">
-        <img width="200px" height="400px" :src="`http://localhost:3000/images/articles/${a.image}`" />
+        <q-img
+          width="300px"
+          height="300px"
+          :src="`http://localhost:3000/images/articles/${a.image}`"
+        />
 
         <q-card-section class="card-title-box">
           <div class="text-h6" v-html="a.title"></div>
@@ -36,21 +40,27 @@
   </div>
 </template>
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import ArticleDialog from '../components/ArticleDialog.vue';
 import { useArticleStore } from '../stores/articles.js';
 
 const articleStore = useArticleStore();
-const articles = articleStore.articles;
 
 const slide = ref(1);
 const autoplay = ref(4000);
 const toggle = ref(false);
 
 const article = ref();
+const articles = ref();
+
+onMounted(async () => {
+  await articleStore.getArticles();
+  articles.value = articleStore.articles;
+  console.log(articles.value);
+});
 
 const openDialog = (id) => {
-  article.value = articles.find((a) => a.id == id);
+  article.value = articles.value.find((a) => a.id == id);
 
   articleStore.article = article;
 

@@ -21,7 +21,7 @@
         </div>
       </template>
       <template #body-cell-image="props">
-        <img
+        <q-img
           @click="openImage(props.row.item_number)"
           :src="`http://localhost:3000/images/products/${props.row.image}`"
           :alt="props.row.name"
@@ -44,7 +44,7 @@
     </q-table>
     <q-dialog v-model="show">
       <q-card class="my-card2">
-        <q-img class="qimg" :src="`http://localhost:3000/images/products/${product.image}`"></q-img>
+        <q-img :src="`http://localhost:3000/images/products/${product.image}`"></q-img>
         <q-btn
           size="1.5rem"
           class="absolute fixed-top-right q-my-md q-px-md q-py-ld q-mr-md"
@@ -59,23 +59,29 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import { useProductStore } from '../stores/products';
 import { useQuasar } from 'quasar';
 
 const $q = useQuasar();
 
 const productStore = useProductStore();
-const products = productStore.products;
+const products = ref();
 
 const filter = ref('');
 const pagination = ref({
   rowsPerPage: 0,
 });
 
+onMounted(async () => {
+  await productStore.getProducts();
+  products.value = productStore.products;
+  console.log(products.value);
+});
+
 const openImage = (id) => {
   console.log(id);
-  product.value = products.find((p) => p.item_number == id);
+  product.value = products.value.find((p) => p.item_number == id);
 
   productStore.product = product.value;
 
@@ -108,15 +114,11 @@ const columns = [
 ];
 </script>
 <style lang="sass">
-img
-  width: 100px
-  height: 100px
-
 .my-sticky-header-table
   .q-table__top
     background-color: #FFD84D
 
 .my-card2
-    width: 100vw
-    height: 100vh
+    width: 100%
+    height: 70%
 </style>
